@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - include: base.yml
+      packages:
+        - unzip
+        - wget
+        - vim
+        - curl

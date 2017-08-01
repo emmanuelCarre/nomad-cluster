@@ -1,0 +1,5 @@
+machine1 ansible_ssh_host=192.168.77.21
+machine2 ansible_ssh_host=192.168.77.22
+machine3 ansible_ssh_host=192.168.77.23
+machine4 ansible_ssh_host=192.168.77.24
+machine5 ansible_ssh_host=192.168.77.25

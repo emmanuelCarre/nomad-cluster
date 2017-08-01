@@ -1,0 +1,13 @@
+---
+- name: update system packages
+  become: true
+  yum:
+    name: "*"
+    state: latest
+
+- name: install packages
+  become: true
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
