@@ -8,6 +8,10 @@ Vagrant.configure("2") do |config|
   VAGRANT_VM_PROVIDER="libvirt"
   ANSIBLE_RAW_SSH_ARGS = []
 
+  config.vm.provider VAGRANT_VM_PROVIDER do |provider|
+    provider.memory = "1024"
+  end
+
   (1..N).each do |machine_id|
     ANSIBLE_RAW_SSH_ARGS << "-o IdentityFile=.vagrant/machines/machine#{machine_id}/#{VAGRANT_VM_PROVIDER}/private_key"
   end
